@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-jost: "Jost", sans-serif;
+}
+.bg-mains {
+  background: rgb(2, 0, 142);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(2, 0, 142, 1) 0%,
+    rgba(0, 12, 138, 1) 53%,
+    rgba(0, 40, 87, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(2, 0, 142, 1) 0%,
+    rgba(0, 12, 138, 1) 53%,
+    rgba(0, 40, 87, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 142, 1) 0%,
+    rgba(0, 12, 138, 1) 53%,
+    rgba(0, 40, 87, 1) 100%
+  );
+}
+
+.footer-list {
+  @apply space-y-3 text-white/80 font-light cursor-pointer;
+}
+
+.footer-child {
+  @apply hover:text-white duration-300 hover:underline underline-offset-2 transition-colors;
+}
+
+.footer-heading {
+  @apply font-normal leading-[3rem] text-lg relative before:absolute before:h-[2.5px] before:w-[90%] before:bg-sky-600 before:bottom-0 w-fit before:left-1/2 before:-translate-x-1/2;
+}
+
+.custom-grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: 
+    'one two three four five'
+    'one two three four five'
+    'one two six six six'
+  ;
+}
+
+.grid-item:nth-child(1) {
+  grid-area: one;
+}
+
+.grid-item:nth-child(2) {
+  grid-area: two;
+}
+
+.grid-item:nth-child(3) {
+  grid-area: three;
+}
+
+.grid-item:nth-child(4) {
+  grid-area: four;
+}
+
+.grid-item:nth-child(5) {
+  grid-area: five;
+}
+
+.grid-item:nth-child(6) {
+  grid-area: six;
+}
+
+@media screen and (max-width: 1350px) {
+  .custom-grid {
+    grid-template-areas:
+    'six six six six six'
+    'one two three four five'
+    'one two three four five'
+    'one two three four five'
+  ;
+  }
+}
+
+@media screen and (width <= 1250px) {
+  .custom-grid {
+    grid-template-areas:
+    'six six six six six'
+    'two two two three three'
+    'four four four five five'
+    'one one one none none'
+  ;
+  }
+}
+
+@media screen and (width <= 880px) {
+  .custom-grid {
+    grid-template-areas:
+    'six six six six six'
+    'two two two three three'
+    'four four four five five'
+    'one one one one one'
+  ;
+  }
+}
