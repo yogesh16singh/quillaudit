@@ -34,7 +34,7 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 w-full h-20 z-[9999]",
         scrolled ? "bg-blue-900/30 backdrop-blur-sm" : "bg-transparent",
-        isOpen && "bg-black xl:bg-transparent"
+        isOpen && "bg-black xl:bg-transparent",
       )}
     >
       <nav className="h-full">
@@ -95,7 +95,7 @@ const Navbar = () => {
         <div
           className={cn(
             "h-[calc(100vh-80px)] flex items-center justify-center transition-transform xl:hidden w-full bg-black fixed z-[99]",
-            isOpen ? "top-20 bottom-0" : "-translate-y-full bottom-0 inset-0"
+            isOpen ? "top-20 bottom-0" : "-translate-y-full bottom-0 inset-0",
           )}
         >
           <ul className="space-y-8">
